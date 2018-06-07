@@ -1,0 +1,43 @@
+.navbar {
+  background-color: lightgrey;
+  color: white;
+}
+
+/* a.navbar-brand {
+  color: white;
+}
+
+ul li a{
+  color: white;
+} */
+
+/* a {
+  color: white;
+}
+
+
+unvisited link
+a:link {
+  color: red;
+}
+
+/* visited link */
+/* a:visited {
+  color: red;
+} */
+
+/* mouse over link */
+/* a:hover {
+  color: hotpink;
+} */
+
+/* selected link */
+/* a:active {
+  color: blue;
+} */ */
+
+
+a.navbar {
+  background-color:  white;
+
+}
