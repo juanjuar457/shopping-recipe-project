@@ -1,19 +1,37 @@
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn-btn-success">New recipe</button>
+    <button class="btn btn-success">New recipe</button>
+    <hr>
   </div>
   <div class="row"></div>
     <div class="col-xs-12">
-      <a href="#" class="list-group-item clearfix">
+      <a
+        href="#"
+        class="list-group-item clearfix"
+        *ngFor="let recipe of recipes">
         <div class="pull-left">
-          <h4 class="list-group-item-heading">Recipe Name</h4>
-          <p class="list-group-item-text">Description</p>
+          <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+          <p class="list-group-item-text">{{ recipe.description }}</p>
         </div>
         <span class="pull-right">
-          <img src="" alt="" class="img-responsive" style="max-height: 50px;">
+          <img
+          src="{{ recipe.imagePath }}"
+          alt="{{ recipe.name }}"
+          class="img-responsive"
+          style="max-height: 50px;">
         </span>
       </a>
       <app-recipe-item></app-recipe-item>
     </div>
 </div>
 <app-recipe-item></app-recipe-item>
+
+
+<!-- alternative for hooking into the src in the img tag
+to make sure we use the image from the model we set up
+
+you could use string interpolation or 1 way property binding
+used string interpolation above on line 17
+
+1 way - property binding - binding to the actual src attr in the img tag.. -->
+<!-- KIP both approaches work! -->
